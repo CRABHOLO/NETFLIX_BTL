@@ -17,16 +17,20 @@
 
 /*Icon*/
 .search-icon{
+    margin-top: 5px;
+    margin-left: 5px;
     padding-right: 30px;
     max-width: 100%;
     color: white;
 }
 .bell-icon{
+    margin-bottom: 5px;
     padding-right: 30px;
     max-width: 100%;
     color: white;
 }
 .user-icon{
+    margin-bottom: 5px;
     padding-right: 6px;
     max-width: 100%;
     color: white;
