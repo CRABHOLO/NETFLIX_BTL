@@ -7,15 +7,18 @@
     <title>Signup_Netflix</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/style_signup.css">
+    <link rel="stylesheet" href="assets/css/style_signup.css">
 </head>
  
 <body class="bg__wrap">
     <nav class="main_nav">
         <a href="#" class="navbar-brand">
-            <img src="images/logo.jpg" alt="net/logo" class="img-fluid">
+            <img src="assets/images/logo.jpg" alt="net/logo" class="img-fluid">
         </a>
-        <button>Signin</button>
+        <button class="btn_login">
+        <a href="login.php" class="text_login" >Login</a>
+        </button>
+        
     </nav>
     <div class="container">
         <div class="col-lg-4 col-md-8 col-sm-10 col-12 mx-lg-auto mx-md-auto mx-5m-auto mx-auto">
@@ -26,12 +29,12 @@
                     </div>
                     <form action="#" method="GET">
                             <div class="mb-3">
-                              <div id="email" class="form-text">Họ</div>
-                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email hoặc số điện thoại">
+                              <div class="form-text">Họ</div>
+                              <input  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email hoặc số điện thoại">
                             </div>
                             <div class="mb-3">
-                               <div id="password" class="form-text">Tên</div>
-                              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mật khẩu">
+                               <div class="form-text">Tên</div>
+                              <input  class="form-control" id="exampleInputPassword1" placeholder="Mật khẩu">
                             </div>
                             <div class="mb-3">
                               <div id="email" class="form-text">Email</div>

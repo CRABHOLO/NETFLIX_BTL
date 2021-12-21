@@ -7,13 +7,13 @@
     <title>Signin_Netflix</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/styles_login.css">
+    <link rel="stylesheet" href="assets/css/styles_login.css">
 </head>
 
 <body class="bg__wrap">
     <nav class="main_nav">
         <a href="#" class="navbar-brand">
-            <img src="images/logo.jpg" alt="net/logo" class="img-fluid">
+            <img src="assets/images/logo.jpg" alt="net/logo" class="img-fluid">
         </a>
     </nav>
     <div class="container">
@@ -44,7 +44,7 @@
                                   </div>
                             </div>
                             <div class="fb_link">
-                                <a href="#"><img src="images/fb.jpg" class="img-fruid" alt="fb/img"></a>
+                                <a href="#"><img src="assets/images/fb.jpg" class="img-fruid" alt="fb/img"></a>
                                 <label class="form-check-label-fb text-white" for="inlineCheckbox2">Đăng nhập bằng tài khoản Facebook</label>
                             </div>
                             <div>
