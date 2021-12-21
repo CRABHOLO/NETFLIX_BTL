@@ -3,6 +3,9 @@
     padding:0;
 }
 
+.container-fluid{
+    width: 50%;
+}
 .navbar-brand{
     width: 150px;
     height: 90px;
@@ -11,15 +14,18 @@
     max-width: 100%;
 
 }
-.navbar-nav{
-    padding: 0;
+
+.d-flex{
+    padding-left: 15px;
 }
+
+
 
 /*Icon*/
 .search-icon{
-    margin-top: 5px;
-    margin-left: 5px;
-    padding-right: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-right: 50px;
     max-width: 100%;
     color: white;
 }
@@ -31,7 +37,7 @@
 }
 .user-icon{
     margin-bottom: 5px;
-    padding-right: 6px;
+    padding-right: 5px;
     max-width: 100%;
     color: white;
 }
