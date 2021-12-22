@@ -138,3 +138,61 @@ a{
     z-index: 1;
     background: linear-gradient(to bottom,rgba(0,0,0,0.8),transparent);
 }
+.TV{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: black;
+    align-items: center;
+    padding: 2rem 4rem;
+    border-top: 8px solid#222;
+    border-bottom:8px solid #222;
+    
+}
+.TV-text .TV-title{
+    color: #fff;
+    line-height: 1.1;
+    font-size: 3.6rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
+.TV-text .TV-sutitle{
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+.TV-text {
+    flex-basis: 40%;
+    margin-left: 100px;
+}
+.TV-show-container{
+    flex-basis: 45%;
+
+}
+.TV-show-img-animation-container{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.TV-show-animation{
+    height: 100%;
+   width: 100%;
+   max-width: 76%;
+   max-height: 54%;
+   position: absolute;
+   top: 46%;
+   left: 50%;
+  transform: translate(-50%,-50%);
+}
+.TV-img{
+    position: relative;
+    z-index: 10;
+    max-width: 100%;
+    height: auto;
+
+}
+.TV-show-animation{
+    width: 100%;
+    height: 100%;
+}
