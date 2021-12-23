@@ -49,7 +49,7 @@
                             </div>
                             <div>
                                 <label class="form-check-label-1 text-white " for="inlineCheckbox2">Bạn mới tham gia Netflix?</label>
-                                <a class="form-dk" href="#">Đăng ký ngay</a>
+                                <a class="form-dk" href="signup.php">Đăng ký ngay</a>
                             </div>
                             <div class="form-research">
                                 <p style="font-size: 14px; color: #757575;" class="rap-form">Trang này được Google reCAPTCHA bảo vệ để đảm bảo bạn không phải là robot.
