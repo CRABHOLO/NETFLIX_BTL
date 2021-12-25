@@ -1,43 +1,17 @@
 /*CSS for header*/
 .col-md-12{
-    padding:0;
+    padding: 0; 
 }
 
-.container-fluid{
-    width: 50%;
+.navbar{
+    padding: 0;
 }
+
 .navbar-brand{
-    width: 150px;
-    height: 90px;
-}
-.img-fluid{
-    max-width: 100%;
-
+    width: 200px;
+    margin: 0;
 }
 
-.d-flex{
-    padding-left: 15px;
-}
-
-
-
-/*Icon*/
-.search-icon{
-    margin-top: 10px;
-    margin-left: 10px;
-    padding-right: 50px;
-    max-width: 100%;
-    color: white;
-}
-.bell-icon{
-    margin-bottom: 5px;
-    padding-right: 30px;
-    max-width: 100%;
-    color: white;
-}
-.user-icon{
-    margin-bottom: 5px;
-    padding-right: 5px;
-    max-width: 100%;
-    color: white;
+.images-fluid{
+    max-width: 50%;
 }
