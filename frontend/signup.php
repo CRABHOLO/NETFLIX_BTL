@@ -27,14 +27,14 @@
                     <div class="form_title">
                         <h1>Tạo tài khoản để bắt đầu xem Netflix</h1>
                     </div>
-                    <form action="#" method="GET">
+                    <form action="process-signup.php" method="post">
                             <div class="mb-3">
                               <div class="form-text">Họ</div>
-                              <input  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email hoặc số điện thoại">
+                              <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Email hoặc số điện thoại">
                             </div>
                             <div class="mb-3">
                                <div class="form-text">Tên</div>
-                              <input  class="form-control" id="exampleInputPassword1" placeholder="Mật khẩu">
+                              <input type="text" class="form-control"  placeholder="Mật khẩu">
                             </div>
                             <div class="mb-3">
                               <div id="email" class="form-text">Email</div>
@@ -57,6 +57,50 @@
             </div>
         </div>
     </div>
+
+    <div class="footer">
+      <div class="footer-head">
+        <a href="#" class="footer-head-text">Bạn có câu hỏi? Liên hệ với chúng tôi.</a>
+      </div>
+      <ul class="footer-links structural">
+        <li class="footer-link-item" placeholder="footer_responsive_link_faq_item">
+          <a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/support/412" placeholder="footer_responsive_link_faq">
+            <span id="" data-uia="data-uia-footer-label">Câu hỏi thường gặp</span>
+          </a>
+        </li>
+            
+        <li class="footer-link-item" placeholder="footer_responsive_link_help_item">
+          <a class="footer-link" data-uia="footer-link" href="https://help.netflix.com" placeholder="footer_responsive_link_help">    
+            <span id="" data-uia="data-uia-footer-label">Trung tâm trợ giúp</span>
+          </a>
+        </li>
+      
+        <li class="footer-link-item" placeholder="footer_responsive_link_terms_item">
+          <a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/legal/termsofuse" placeholder="footer_responsive_link_terms">   
+            <span id="" data-uia="data-uia-footer-label">Điều khoản sử dụng</span>  
+          </a>  
+        </li>
+      </ul>
+      <ul class="footer-links structural">
+        <li class="footer-link-item" placeholder="footer_responsive_link_privacy_separate_link_item">
+          <a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/legal/privacy" placeholder="footer_responsive_link_privacy_separate_link">
+            <span id="" data-uia="data-uia-footer-label">Quyền riêng tư</span>
+          </a>
+        </li>
+      
+        <li class="footer-link-item" placeholder="footer_responsive_link_cookies_separate_link_item">
+          <a class="footer-link" data-uia="footer-link" href="#" placeholder="footer_responsive_link_cookies_separate_link">
+            <span id="" data-uia="data-uia-footer-label">Tùy chọn cookie</span>
+          </a>
+        </li>
+      
+        <li class="footer-link-item" placeholder="footer_responsive_link_corporate_information_item">
+          <a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/legal/corpinfo" placeholder="footer_responsive_link_corporate_information">
+            <span id="" data-uia="data-uia-footer-label">Thông tin doanh nghiệp</span>
+          </a>
+        </li>
+      </ul>
+    </div>  
 
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
