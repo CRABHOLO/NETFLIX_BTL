@@ -1,3 +1,6 @@
+<?php
+require_once('config.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,29 +30,29 @@
                     <div class="form_title">
                         <h1>Tạo tài khoản để bắt đầu xem Netflix</h1>
                     </div>
-                    <form action="process-signup.php" method="post">
+                    <form action="signup.php" method="post">
                             <div class="mb-3">
                               <div class="form-text">Họ</div>
-                              <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Email hoặc số điện thoại">
+                              <input type="text" class="form-control" name="firstName" aria-describedby="emailHelp" placeholder="Email hoặc số điện thoại">
                             </div>
                             <div class="mb-3">
                                <div class="form-text">Tên</div>
-                              <input type="text" class="form-control"  placeholder="Mật khẩu">
+                              <input type="text" class="form-control" name="lastName" placeholder="Mật khẩu">
                             </div>
                             <div class="mb-3">
                               <div id="email" class="form-text">Email</div>
-                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email hoặc số điện thoại">
+                              <input type="email" class="form-control" name="email"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email hoặc số điện thoại">
                             </div>
                             <div class="mb-3">
                                <div id="password" class="form-text">Mật khẩu</div>
-                              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mật khẩu">
+                              <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Mật khẩu">
                             </div>
                             <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
                                     <label class="form-check-label" for="inlineCheckbox1">Ghi nhớ tôi</label>
                             </div>
 
-                            <button type="submit" class="btn ">Đăng ký</button>
+                            <button type="submit" class="btn" name="btnSubmit" >Đăng ký</button>
                             
                             
                     </form>
@@ -57,7 +60,6 @@
             </div>
         </div>
     </div>
-
     <div class="footer">
       <div class="footer-head">
         <a href="#" class="footer-head-text">Bạn có câu hỏi? Liên hệ với chúng tôi.</a>
@@ -104,7 +106,62 @@
 
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#register').click(function(e){
+
+			var valid = this.form.checkValidity();
+
+			if(valid){
+
+
+			var firstName 	= $('#firstName').val();
+			var lastName	= $('#lastName').val();
+			var email 		= $('#email').val();
+			var password 	= $('#password').val();
+			
+
+				e.preventDefault();	
+
+				$.ajax({
+					type: 'POST',
+					url: 'process-sigup.php',
+					data: {firstName: firstName,lastName: lastName,email: email,password: password},
+					success: function(data){
+					Swal.fire({
+								'title': 'Successful',
+								'text': data,
+								'type': 'success'
+								})
+							
+					},
+					error: function(data){
+						Swal.fire({
+								'title': 'Errors',
+								'text': 'There were errors while saving the data.',
+								'type': 'error'
+								})
+					}
+				});
+
+				
+			}else{
+				
+			}
+
+			
+
+
+
+		});		
+
+		
+	});
+	
+</script>
+  </body>
 </html>
 
 
