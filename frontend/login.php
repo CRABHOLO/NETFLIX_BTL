@@ -23,21 +23,26 @@
                     <div class="form_title">
                         <h1>Đăng nhập</h1>
                     </div>
-                    <form action="#" method="GET">
+                    <form action="process_login.php" method="GET">
                             <div class="mb-3">
-                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email hoặc số điện thoại">
-                              <div id="email" class="form-text">Vui lòng nhập email hoặc số điện thoại hợp lệ.</div>
+                              <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email hoặc số điện thoại">
+                              <div id="email" class="form-text" >Vui lòng nhập email hoặc số điện thoại hợp lệ.</div>
                             </div>
                             <div class="mb-3">
-                              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mật khẩu">
+                              <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Mật khẩu">
                               <div id="password" class="form-text">Mật khẩu của bạn phải chứa từ 4 đến 60 ký tự.</div>
                             </div>
-                            <button type="submit" class="btn ">Đăng nhập</button>
+                            <button type="submit" class="btn " name="submit">Đăng nhập</button>
                             
                             <div class="form__footer__setting">
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
                                     <label class="form-check-label text-white" for="inlineCheckbox1">Ghi nhớ tôi</label>
+                                    <?php
+                                      if(isset($_GET['error'])){
+                                      echo "<h5 style='color:red'> {$_GET['error']} </h5>";
+                                      }
+                                    ?>
                                   </div>
                                   <div class="form-check form-check-inline">
                                     <label class="form-check-label text-white" for="inlineCheckbox2">Bạn cần trợ giúp?</label>
@@ -49,7 +54,7 @@
                             </div>
                             <div>
                                 <label class="form-check-label-1 text-white " for="inlineCheckbox2">Bạn mới tham gia Netflix?</label>
-                                <a class="form-dk" href="signup.php">Đăng ký ngay</a>
+                                <a class="form-dk" href="signup.php" >Đăng ký ngay</a>
                             </div>
                             <div class="form-research">
                                 <p style="font-size: 14px; color: #757575;" class="rap-form">Trang này được Google reCAPTCHA bảo vệ để đảm bảo bạn không phải là robot.
