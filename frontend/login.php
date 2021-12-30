@@ -23,7 +23,7 @@
                     <div class="form_title">
                         <h1>Đăng nhập</h1>
                     </div>
-                    <form action="process_login.php" method="GET">
+                    <form action="process_login.php" method="post">
                             <div class="mb-3">
                               <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email hoặc số điện thoại">
                               <div id="email" class="form-text" >Vui lòng nhập email hoặc số điện thoại hợp lệ.</div>

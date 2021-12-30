@@ -2,6 +2,8 @@
     // Tạo SESSION: mặc định mỗi phiên làm việc có thời hạn 24phut
     session_start();
 
+    
+
     //login.php TRUYỀN DỮ LIỆU SANG: NHẬN DỮ LIỆU TỪ login.php gửi sang
     if(isset($_POST['submit'])){
         $email = $_POST['email'];
@@ -19,7 +21,7 @@
         // Nghiêm trọng: lỗi SQL Injection
 
         $result = mysqli_query($conn,$sql);
-        if(mysqli_num_rows($result) > 0){
+        if(mysqli_num_rows($result) <= 0){  // kiểm tra email chưa được dùng
             // CẤP THẺ LÀM VIỆC
             $_SESSION['isLoginOK'] = $email;
             header("location: home.php"); //Chuyển hướng về Trang quản trị
