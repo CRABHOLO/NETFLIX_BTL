@@ -30,29 +30,18 @@
                     <div class="form_title">
                         <h1>Tạo tài khoản để bắt đầu xem Netflix</h1>
                     </div>
-
-                    <?php
-                        if( isset($_SESSION["thongbao"])){
-                          echo $_SESSION["thongbao"];
-                          session_unset("thongbao");
-                        }
-                    ?>
                     <form action="process_signup.php" method="post">
                             <div class="mb-3">
-                              <div class="form-text">Họ</div>
-                              <input type="text" class="form-control" id="firstname" name="firstname" aria-describedby="emailHelp" placeholder="Email hoặc số điện thoại">
-                            </div>
-                            <div class="mb-3">
-                               <div class="form-text">Tên</div>
-                              <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Mật khẩu">
+                              <div class="form-text">Họ và Tên</div>
+                              <input type="text" class="form-control" id="firstname" name="name" aria-describedby="emailHelp" placeholder="Họ và tên" require>
                             </div>
                             <div class="mb-3">
                               <div id="email" class="form-text">Email</div>
-                              <input type="email" class="form-control" name="email"  id="email" aria-describedby="emailHelp" placeholder="Email hoặc số điện thoại">
+                              <input type="email" class="form-control" name="email"  id="email" aria-describedby="emailHelp" placeholder="Email hoặc số điện thoại" require>
                             </div>
                             <div class="mb-3">
                                <div id="password" class="form-text">Mật khẩu</div>
-                              <input type="password" name="password" class="form-control" id="password" placeholder="Mật khẩu">
+                              <input type="password" name="password" class="form-control" id="password" placeholder="Mật khẩu" require>
                             </div>
                             <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
