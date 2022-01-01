@@ -12,11 +12,8 @@
     margin: 0;
 }
 
-.images-fluid{
-    max-width: 50%;
+header .image-fluid{
+    max-width: 0%;
 }
 
 /*CSS for main*/
-.main_container{
-    max-width: 100%;
-}
