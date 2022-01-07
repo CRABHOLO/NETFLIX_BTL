@@ -1,11 +1,12 @@
 <?php
 require 'config.php'; // kết nối tới csdl
 
-if(isset($_POST['submit'])  &&  $_POST["name"] != '' &&  $_POST["email"] != '' &&  $_POST["password"] != ''){
+if(isset($_POST['submit'])  ){
  ////kiểm tra người dùng nhấp vào nút submit chưa và đã nhập email chưa
-	$name 		= $_POST['name']; //coi dữ liệu là hợp lệ
+	$name 		    = $_POST['name']; //coi dữ liệu là hợp lệ
 	$email 			= $_POST['email'];
 	$password 		= $_POST['password'];
+    $repassword 	= $_POST['repassword'];
     
     // Bước 02: Thực hiện truy vấn
     $sql01 = "SELECT * FROM users WHERE email = '$email'  ";
@@ -20,7 +21,7 @@ if(isset($_POST['submit'])  &&  $_POST["name"] != '' &&  $_POST["email"] != '' &
         $pass_md5 = md5($password);
         $pass_hash = password_hash($password,PASSWORD_DEFAULT );
         //ra lệnh lưu vào CSDL
-        $sql02 = "INSERT INTO users (name, email ,password,email_verification_link) VALUES ('$name','$email','$pass_hash','$token')";
+        $sql02 = "INSERT INTO users (name, email ,password,repassword,email_verification_link) VALUES ('$name','$email','$pass_hash','$repassword','$token')";
         $result02 = mysqli_query($conn,$sql02);
         //Sau khi lưu xong chúng ta cần gửi tới email đăng kí đường link tới website của chúng ta 
         //yêu cầu người dùng kích hoạt ;biến link sẽ được gửi vào email
