@@ -12,8 +12,8 @@
     margin: 0;
 }
 
-header .image-fluid{
-    max-width: 0%;
+.image-fluid{
+    max-width: 90%;
 }
 
 /*CSS for main*/
