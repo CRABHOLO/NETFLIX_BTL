@@ -13,14 +13,13 @@
     <script src="assets/js/scrip-signup.js"></script>
     <link rel="stylesheet" href="assets/css/style_signup.css">
 </head>
- 
 <body class="bg__wrap">
     <nav class="main_nav">
         <a href="#" class="navbar-brand">
             <img src="assets/images/logo.jpg" alt="net/logo" class="img-fluid">
         </a>
         <button class="btn_login">
-        <a href="login.php" class="text_login" >Login</a>
+        <a href="login.php" class="text_login" >Đăng nhập</a>
         </button>
         
     </nav>
