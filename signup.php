@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="./assets/js/scrip-signup.js"></script>
+    <script src="assets/js/scrip-signup.js"></script>
     <link rel="stylesheet" href="assets/css/style_signup.css">
 </head>
 <body class="bg__wrap">
@@ -33,19 +33,22 @@
                     <form autocomplete action="process_signup.php" method="post" id="registraion_form">
                             <div class="mb-3">
                               <div class="form-text">Họ và Tên</div>
-                              <input type="text" class="form-control" id="fullname" name="txtfullname" aria-describedby="emailHelp" placeholder="Họ và tên" required>
+                              <input type="text" class="form-control" id="fullname" name="txtfullname" placeholder="Họ và tên" required>
                             </div>
                             <div class="mb-3">
-                              <div id="email" class="form-text">Email</div>
-                              <input type="email" class="form-control" name="txtemail"  id="email" aria-describedby="emailHelp" placeholder="Email hoặc số điện thoại" required>
+                              <label class="form-text" for="inputemail">Email</label>
+                              <input type="email" class="form-control" name="txtemail"  id="inputemail" aria-describedby="emailHelp" placeholder="...@gmail.com" required>
+                              <small id="emailHelp"></small>
                             </div>
                             <div class="mb-3">
-                              <div id="password" class="form-text">Mật khẩu</div>
-                              <input type="password" name="txtpassword" class="form-control" id="password1" placeholder="Mật khẩu" required>
+                              <label class="form-text" for="inputpassword1">Mật khẩu</label>
+                              <input type="password" name="txtpassword" class="form-control" id="password1" aria-describedby="pass1Help" placeholder="Mật khẩu" required>
+                              <small id="pass1Help" ></small>
                             </div>
                             <div class="mb-3">
-                              <div id="password" class="form-text">Nhập lại mật khẩu</div>
-                              <input type="password" name="repassword" class="form-control" id="password2" placeholder="Nhập lại mật khẩu" required>
+                              <label class="form-text" for="inputpassword2">Nhập lại mật khẩu</label>
+                              <input type="password" name="repassword" class="form-control" id="password2" aria-describedby="pass2Help" placeholder="Nhập lại mật khẩu" required>
+                              <span id="message"></span>
                               <script>
                                 $('#password1, #password2').on('keyup', function () {
                                   if ($('#password1').val() == $('#password2').val()) {
@@ -66,11 +69,7 @@
                             <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
                                     <label class="form-check-label" for="inlineCheckbox1">Ghi nhớ tôi</label>
-                                    <?php
-                                      if(isset($_GET['error'])){
-                                          echo "<h5 style='color:red'> {$_GET['error']} </h5>";
-                                      }
-                                    ?>
+                                   
                             </div>
 
                             <button type="submit" class="btn" name="submit" id="btn_submit" >Đăng ký</button>

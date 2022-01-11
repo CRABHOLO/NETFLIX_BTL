@@ -1,7 +1,7 @@
 //xác thực email
 $(document).ready(function(){
   //client:kiểm tra tích hợp lệ của email
-   $("#email").change(function(){
+   $("#inputemail").change(function(){
        let emailPatterm = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@(gmail.com)$/;
        if(emailPatterm.test($(this).val()) == false){
            $("#emailHelp").text("Email không hợp lệ ").css("color","red");
@@ -10,7 +10,6 @@ $(document).ready(function(){
               url:"check_signup.php",
               type:"post",
               data:{email:$(this).val()},
-              //callback funtion 
               success:function(res){
                   $("#emailHelp").text(res).css("color","green");
               }
@@ -26,7 +25,7 @@ $(document).ready(function(){
    $("#password1").change(function(){
        let passPatterm = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
        if(passPatterm.test($("#password1").val()) == false){
-           $("#password1Help").text("Mật khẩu tối thiểu là tám ký tự, ít nhất một chữ cái viết hoa,chữ cái viết thường và chữ số").css("color","red");
+           $("#pass1Help").text("Mật khẩu tối thiểu là tám ký tự, ít nhất một chữ cái viết hoa,chữ cái viết thường và chữ số").css("color","red");
        }else{
           $.ajax ({
               url:"checkpass_signup.php",
@@ -34,13 +33,13 @@ $(document).ready(function(){
               data:{password1:$(this).val()},
               //callback funtion 
               success:function(re){
-                  $("#password1Help").text(re).css("color","green");
+                  $("#pass1Help").text(re).css("color","green");
               }
           })
        }
    })
  })
-// //xử lý sìdebar
+//xử lý sìdebar
 // $(function(){
 // let path=window.location.href;
 // $('#sidebarMenu ul li a').each(function(){
