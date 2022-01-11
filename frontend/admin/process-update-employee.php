@@ -7,13 +7,13 @@
     }
     // Xử lý giá trị GỬI TỚI
     if(isset($_POST['txtMaND'])){
-        $maNhanVien = $_POST['txtMaND'];
+        $maNguoiDung = $_POST['txtMaND'];
     }
     if(isset($_POST['txtHoTen'])){
         $hoTen      = $_POST['txtHoTen'];
     }
     $email          = $_POST['txtEmail'];
-    $password       = $_POST['password'];
+    $password       = $_POST['txtpassword'];
 
     
     // Bước 01: Kết nối Database Server
@@ -22,7 +22,7 @@
         die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
     }
     // Bước 02: Thực hiện truy vấn
-    $sql = "UPDATE users SET fullname ='$hoTen', email='$email', password = '$password";
+    $sql = "UPDATE users SET fullname ='$hoTen', email='$email', password = '$password' WHERE id = '$maNguoiDung'";
     // echo $sql;
 
     $ketqua = mysqli_query($conn,$sql);

@@ -18,6 +18,9 @@
 
     $result = mysqli_query($conn,$sql); //Nó chỉ ra về 1 bản ghi, mà mình chỉ cần lấy 1 bản ghi thôi
 
+    if(mysqli_num_rows($result) > 0){
+        $row = mysqli_fetch_assoc($result);
+    }
     
     // Bước 04: Đóng kết nối
     mysqli_close($conn);
