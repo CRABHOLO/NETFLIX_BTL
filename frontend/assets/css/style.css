@@ -368,5 +368,45 @@ a{
 	background: #f21313;
 	
 }
+.header_footer{
+    background-color: #000 !important;
+}
+.header_footer h2{
+    color: #fff;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 
+.text_footer{
+    color: #000 !important;
+    
+}
+#accordion{
+    margin-bottom: 30px !important;
+    
+}
+.bottom-email-search{
+   
+    background-color: #000;
+}
+
+.main-search{
+    margin-bottom: 20px;
+    height: 30%;
+    
+}
+.input-group-text{
+    border: 0;
+    color: #fff !important;
+    background-color: #e50914 !important;
+}
+.footer{
+    background-color: #000;
+}
+.text_question a{
+    color: #fff !important;
+    
+   
+    
+}
 

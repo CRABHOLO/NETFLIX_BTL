@@ -4,9 +4,9 @@
 if(isset($_POST['submit'])  ){
    
  ////kiểm tra người dùng nhấp vào nút submit chưa và đã nhập email chưa
-	$fullname 		    = $_POST['fullname']; //coi dữ liệu là hợp lệ
-	$email 			= $_POST['email'];
-	$password 		= $_POST['password'];
+	$fullname 		    = $_POST['txtfullname']; //coi dữ liệu là hợp lệ
+	$email 			= $_POST['txtemail'];
+	$pass1 		= $_POST['txtpassword'];
    
     // Bước 02: Thực hiện truy vấn
     $sql01 = "SELECT * FROM users WHERE email = '$email'  ";
@@ -18,9 +18,9 @@ if(isset($_POST['submit'])  ){
         header("location: signup.php?error=$error"); //Chuyển hướng, hiển thị thông báo lỗi
     }else//Kiểm tra email chưa được dùng (mysqli_num_rows($result01) <= 0)
     {
-        $token = md5($_POST['email']).rand(10,9999);//sử dụng giải thuật md5 để sinh ra chuỗi ngẫu nhiên được băm
-        $pass_md5 = md5($password);
-        $pass_hash = password_hash($password,PASSWORD_DEFAULT );
+        $token = md5($_POST['txtemail']).rand(10,9999);//sử dụng giải thuật md5 để sinh ra chuỗi ngẫu nhiên được băm
+        $pass_md5 = md5($pass1);
+        $pass_hash = password_hash($pass1, PASSWORD_DEFAULT);
         //ra lệnh lưu vào CSDL
         $sql02 = "INSERT INTO users (fullname, email ,password,email_verification_link) VALUES ('$fullname','$email','$pass_hash','$token')";
         $result02 = mysqli_query($conn,$sql02);

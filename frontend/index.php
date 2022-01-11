@@ -78,17 +78,17 @@
 
     
     <section>
-    <div class="faq">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <h2 class="mb-5">Câu hỏi thường gặp</h2>
+    <div class="header_footer faq">
+      <div class="  row">
+        <div class=" col-md-12 text-center">
+          <h2 class=" mb-5">Câu hỏi thường gặp</h2>
         </div>
       </div>
-      <div class="row">
+      <div class=" row">
         <div class="col-lg-3 col-md-2 col-1"></div>
-        <div class="col-lg-6 col-md-8 col-10 p-0">
+        <div class=" contain_footer col-lg-6 col-md-8 col-10 p-0">
         <div id="accordion">
-    <div class="card">
+    <div class=" contain_footer card">
       
         <a class=" btn" data-bs-toggle="collapse" href="#collapseOne">
           Netflix là gì?
@@ -102,7 +102,7 @@
         </div>
       </div>
     </div>
-    <div class="card">
+    <div class="contain_footer card">
       
       <a class=" btn" data-bs-toggle="collapse" href="#collapsetwo">
         Tôi phải trả bao nhiêu tiền để xem Netflix?
@@ -115,7 +115,7 @@
       </div>
     </div>
   </div>
-    <div class="card">
+    <div class="contain_footer card">
         <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsethree">
        Tôi có thể xem ở đâu?
         
@@ -128,7 +128,7 @@
         </div>
       </div>
     </div>
-    <div class="card">
+    <div class="contain_footer card">
         <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsefour">
           Làm thế nào để hủy Netflix?
           
@@ -139,7 +139,7 @@
         </div>
       </div>
     </div>
-    <div class="card">
+    <div class="contain_footer card">
         <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsefive">
           Tôi có thể xem gì trên Netflix?
           
@@ -150,14 +150,14 @@
         </div>
       </div>
     </div>
-    <div class="card">
+    <div class="contain_footer card">
         <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsesix">
           Netflix có phù hợp cho trẻ em không?
           
         </a>
      
       <div id="collapsesix" class="collapse" data-bs-parent="#accordion">
-        <div class="card-body">
+        <div class="text_footer card-body">
         Trải nghiệm Netflix Trẻ em có sẵn trong gói dịch vụ của bạn, trao cho phụ huynh quyền kiểm soát trong khi các em có thể thưởng thức các bộ phim và chương trình phù hợp cho gia đình tại không gian riêng.
         <br></br>
         Hồ sơ Trẻ em đi kèm tính năng kiểm soát của cha mẹ (được bảo vệ bằng mã PIN), cho phép bạn giới hạn độ tuổi cho nội dung con mình được phép xem, cũng như chặn những phim hoặc chương trình mà bạn không muốn các em nhìn thấy.
@@ -175,7 +175,7 @@
   <section class="bottom-email-search">
     <div class="bottom-search">
       <p class="text-center">Ready to watch? Enter your email to create or restart your membership.</p>
-      <div class="row w-100">
+      <div class=" row w-100">
         <div class="col-md-2 col-1"></div>
         <div class="col-md-8 col-10  main-search">
           <a href="signup.php" class="input-group-text " id="basic-addon2">Sign up now <i class="fas fa-chevron-right"></i></a>
@@ -185,11 +185,11 @@
     </div>
   </section>
 
-  <footer>
-    <div class="container">
+  <footer class="footer">
+    <div class=" container">
      
-      <div class="row">
-        <div class="col-md-4 col-6">
+      <div class=" text_question row">
+        <div class="  col-md-4 col-6">
           <ul>
             <li><a href="contactus.php" class="question-contact">Questions? Contact us.</a></li>
             <li><a href="FAQ.php">FAQ</a></li>
