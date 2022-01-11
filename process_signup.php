@@ -1,45 +1,46 @@
 <?php
-  require 'config.php';// kết nối tới csdl
+    // Tạo SESSION: mặc định mỗi phiên làm việc có thời hạn 24phut
+    session_start();
 
-if(isset($_POST['submit'])  ){
-   
- ////kiểm tra người dùng nhấp vào nút submit chưa và đã nhập email chưa
-	$fullname 		    = $_POST['txtfullname']; //coi dữ liệu là hợp lệ
-	$email 			= $_POST['txtemail'];
-	$pass1 		= $_POST['txtpassword'];
-   
-    // Bước 02: Thực hiện truy vấn
-    $sql01 = "SELECT * FROM users WHERE email = '$email'  ";
-    $result01 = mysqli_query($conn,$sql01);
-    $result01 = mysqli_query($conn,"SELECT * FROM users WHERE email='$email'");
-    if(mysqli_num_rows($result01) > 0){
-        //$error = "Bạn nhập thông tin Email đã tồn tại";
-        echo "Tài khoản $email đã tồn tại";
-        header("location: signup.php?error=$error"); //Chuyển hướng, hiển thị thông báo lỗi
-    }else//Kiểm tra email chưa được dùng (mysqli_num_rows($result01) <= 0)
-    {
-        $token = md5($_POST['txtemail']).rand(10,9999);//sử dụng giải thuật md5 để sinh ra chuỗi ngẫu nhiên được băm
-        $pass_md5 = md5($pass1);
-        $pass_hash = password_hash($pass1, PASSWORD_DEFAULT);
-        //ra lệnh lưu vào CSDL
-        $sql02 = "INSERT INTO users (fullname, email ,password,email_verification_link) VALUES ('$fullname','$email','$pass_hash','$token')";
-        $result02 = mysqli_query($conn,$sql02);
-        //Sau khi lưu xong chúng ta cần gửi tới email đăng kí đường link tới website của chúng ta 
-        //yêu cầu người dùng kích hoạt ;biến link sẽ được gửi vào email
-
-        $link = "<a href='localhost/BTL/frontend/activation.php?key=".$email."&token=".$token."'>Nhấp vào đây để kích hoạt</a>";
-        include "send-mail.php";
-        if(sendEmailForAccountActive($email,$link)){
-            echo "vui lòng kiểm tra hộp thư của bạn để kích hoạt tài khoản";
+    //login.php TRUYỀN DỮ LIỆU SANG: NHẬN DỮ LIỆU TỪ login.php gửi sang
+    if(isset($_POST['submit'])&& isset($_POST['txtemail'])){
+        $email = $_POST['txtemail'];
+        $pass  = $_POST['txtpassword'];//mật khẩu thô
+        //Ở đây còn phải kiểm tra người dùng đã nhập chưa
+     
+        //Bước 01: Kết nối Database Server
+        $conn = mysqli_connect('localhost','root','','netflix');
+        if(!$conn){
+            die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
         }
-        else{
-            echo "Xin lỗi email chưa được gửi đi .Vui lòng kiểm tra lại thông tin đăng kí tài khoản";
+        // Bước 02: Thực hiện truy vấn
+        $sql = "SELECT * FROM users WHERE email = ? ";
+        // Ở đây còn có các vấn đề về tính hợp lệ dữ liệu nhập vào FORM
+        // Nghiêm trọng: lỗi SQL Injection
+        $stmt = mysqli_prepare($conn,$sql);
+        mysqli_stmt_bind_param($stmt,"s",$email);
+        if(mysqli_stmt_execute($stmt)){
+            mysqli_stmt_bind_result($stmt,$id,$fullname,$email,$password,$status,$email_verification_link,$email_verified_at);
+            if(mysqli_stmt_fetch($stmt)){
+                // echo $pass;
+                // echo $matkhau;
+                if(password_verify($pass,$matkhau)){
+                    $_SESSION['isSigninOK'] = $id; 
+                    header("location:home.php");
+                    mysqli_close($conn);
+                }else{
+                    mysqli_close($conn);
+                    $error="Tài khoản và mật khẩu không chính xác!";
+                    header("location: login.php?error=$error"); //Chuyển hướng, hiển thị thông báo lỗi
+                }
+            }else{
+               echo 'Dữ liệu không khớp';
+               mysqli_close($conn);
+            }
+        }else{
+            echo 'Không có dữ liệu';
+            mysqli_close($conn);
         }
-          
+        
     }
-      
-
-        // Bước 03: Đóng kết nối
-        mysqli_close($conn);
-}
 ?>
