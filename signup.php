@@ -12,6 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="assets/js/scrip-signup.js"></script>
     <link rel="stylesheet" href="assets/css/style_signup.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> -->
 </head>
  
 <body class="bg__wrap">
@@ -34,19 +35,22 @@
                     <form autocomplete action="process_signup.php" method="post" id="registraion_form">
                             <div class="mb-3">
                               <div class="form-text">Họ và Tên</div>
-                              <input type="text" class="form-control" id="fullname" name="txtfullname" aria-describedby="emailHelp" placeholder="Họ và tên" required>
+                              <input type="text" class="form-control" id="fullname" name="txtfullname"  placeholder="Họ và tên" required>
                             </div>
                             <div class="mb-3">
                               <div id="email" class="form-text">Email</div>
-                              <input type="email" class="form-control" name="txtemail"  id="email" aria-describedby="emailHelp" placeholder="Email hoặc số điện thoại" required>
+                              <input type="email" class="form-control" name="txtemail"  id="email" aria-describedby="emailHelp" placeholder="Email hoặc số điện thoại" required autofocus>
                             </div>
                             <div class="mb-3">
-                              <div id="password" class="form-text">Mật khẩu</div>
-                              <input type="password" name="txtpassword" class="form-control" id="password1" placeholder="Mật khẩu" required>
+                              <div id="password" class="form-text">Mật khẩu 
+                              <input type="password" name="txtpassword" class="form-control" id="password1" aria-describedby="password1Help" placeholder="Mật khẩu" required autofocus >
+                              <!-- <span class="show-btn"><i class="fas fa-eye"></i></span> -->
                             </div>
                             <div class="mb-3">
-                              <div id="password" class="form-text">Nhập lại mật khẩu</div>
+                              <div id="password" class="form-text">Nhập lại mật khẩu
                               <input type="password" name="repassword" class="form-control" id="password2" placeholder="Nhập lại mật khẩu" required>
+                              <!-- <span class="show-btn"><i class="fas fa-eye"></i></span> -->
+                              <span id='message'></span>
                               <script>
                                 $('#password1, #password2').on('keyup', function () {
                                   if ($('#password1').val() == $('#password2').val()) {
