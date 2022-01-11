@@ -25,9 +25,8 @@ $(document).ready(function(){
  $(document).ready(function(){
    $("#password1").change(function(){
        let passPatterm = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
-       //Tối thiểu tám ký tự, ít nhất một chữ cái viết hoa, một chữ cái viết thường và một số:
        if(passPatterm.test($("#password1").val()) == false){
-           $("#password1Help").text("Mật khẩu tối thiểu là ám ký tự, ít nhất một chữ cái viết hoa, một chữ cái viết thường và một số").css("color","red");
+           $("#password1Help").text("Mật khẩu tối thiểu là tám ký tự, ít nhất một chữ cái viết hoa,chữ cái viết thường và chữ số").css("color","red");
        }else{
           $.ajax ({
               url:"checkpass_signup.php",
@@ -41,26 +40,25 @@ $(document).ready(function(){
        }
    })
  })
-//xử lý sìdebar
-$(function(){
-//alert ("jwhsdeiuwq");
-let path=window.location.href;
-$('#sidebarMenu ul li a').each(function(){
-   if(this.href==path){
-      $(this).addClass('active')
-   }
-})
-})
-//xử lý nút post(chạy không vào)
-let textarea = document.querySelector("#content_status");
-let inputButton = document.querySelector("#submit");
-textarea.addEventListener("change",stateHandle);
-inputButton.disabled= true;
-function stateHandle(){
-  if(document.querySelector("#content_status").value === ""){
-      inputButton.disabled=true; 
-  }else{
-      inputButton.disabled=false; 
-  }
+// //xử lý sìdebar
+// $(function(){
+// let path=window.location.href;
+// $('#sidebarMenu ul li a').each(function(){
+//    if(this.href==path){
+//       $(this).addClass('active')
+//    }
+// })
+// })
+// //xử lý nút post(chạy không vào)
+// let textarea = document.querySelector("#content_status");
+// let inputButton = document.querySelector("#submit");
+// textarea.addEventListener("change",stateHandle);
+// inputButton.disabled= true;
+// function stateHandle(){
+//   if(document.querySelector("#content_status").value === ""){
+//       inputButton.disabled=true; 
+//   }else{
+//       inputButton.disabled=false; 
+//   }
 
-}
+// }

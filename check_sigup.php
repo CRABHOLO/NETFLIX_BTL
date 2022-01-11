@@ -7,7 +7,7 @@
     }
 ?>
 <?php
-if($_POST['email'])//kiểm tra người dùng nhấp vào nút submit chưa và đã nhập email chưa
+if($_POST['txtemail'])//kiểm tra người dùng nhấp vào nút submit chưa và đã nhập email chưa
 {   // header("location:signup.php");
         //coi dữ liệu là hợp lệ
         $email = $_POST['txtemail'];
