@@ -24,16 +24,16 @@
                     <div class="form_title">
                         <h1>Đăng nhập Admin</h1>
                     </div>
-                    <form action="process_login.php" method="post">
+                    <form action="process-login.php" method="post">
                             <div class="mb-3">
-                              <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email hoặc số điện thoại">
+                              <input type="email" name="txtEmail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email hoặc số điện thoại">
                               <div id="email" class="form-text" >Vui lòng nhập email hoặc số điện thoại hợp lệ.</div>
                             </div>
                             <div class="mb-3">
-                              <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Mật khẩu">
+                              <input type="password" class="form-control" id="exampleInputPassword1" name="txtPass" placeholder="Mật khẩu">
                               <div id="password" class="form-text">Mật khẩu của bạn phải chứa từ 4 đến 60 ký tự.</div>
                             </div>
-                            <button type="submit" class="btn " name="submit">Đăng nhập</button>
+                            <button type="submit" class="btn " name="btnSignIn">Đăng nhập</button>
                             
                             <div class="form__footer__setting">
                                 <div class="form-check form-check-inline">
