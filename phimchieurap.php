@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trang Chủ</title>
+  <title>Phim Chiếu Rạp</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="assets/css/style_home.css">
   <link rel="stylesheet" href="assets/css/styles_login.css">
+  <link rel="stylesheet" href="assets/css/style_home.css">
 </head>
 
 <body style="background-color: black;">
@@ -20,7 +20,7 @@
       <div class="col-md-12">
         <nav class="navbar navbar-expand-lg navbar-dark bg-light">
           <div class="container-fluid" style="background-color: black;">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="home.php">
               <img src="assets/images/Netflix.jfif" class="image-fluid" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -31,13 +31,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#" style="color: red;">TRANG CHỦ</a>
+                  <a class="nav-link active" aria-current="page" href="home.php" style="color: red;">TRANG CHỦ</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" style="color: red;">PHIM TRUYỀN HÌNH</a>
+                  <a class="nav-link" href="phimtruyenhinh.php" style="color: red;">PHIM TRUYỀN HÌNH</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" style="color: red;">PHIM CHIẾU RẠP</a>
+                  <a class="nav-link" href="phimchieurap.php" style="color: red;">PHIM CHIẾU RẠP</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" style="color: red;" role="button"
@@ -53,12 +53,12 @@
                   </ul>
                 </li>
               </ul>
-              <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn" type="submit" style="color: red;"><i class="bi bi-search"></i></button>
-              </form>
-              <button class="btn" type="submit" style="color: red;"><i class="bi bi-bell"></i></button>
-              <button class="btn" type="submit" style="color: red;"><i class="bi bi-person-circle"></i></i></button>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn" type="submit" style="color: red; width: 40px; height: 40px;"><i class="bi bi-search"></i></button>
+                </form>
+                <button class="btn"  type="submit" style="color: red;width: 40px; height: 40px;margin: 5px;"><i class="bi bi-bell"></i></button>
+                <button class="btn"  type="submit" style="color: red;width: 40px; height: 40px;"><i class="bi bi-person-circle"></i></i></button>     
             </div>
           </div>
         </nav>
