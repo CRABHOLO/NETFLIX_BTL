@@ -21,7 +21,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-light">
           <div class="container-fluid" style="background-color: black;">
             <a class="navbar-brand" href="home.php">
-              <img src="assets/images/Netflix.jfif" class="image-fluid" alt="">
+              <img src="assets/images/Netflix.jfif" class="image-fluid mb-4 me-4" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -48,9 +48,6 @@
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="#" style="color: red;">KINH DỊ</a></li>
                   </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="addfilm.php" style="color: red;">THÊM PHIM</a>
                 </li>
               </ul>
                 <form class="d-flex">

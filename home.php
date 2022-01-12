@@ -1,3 +1,6 @@
+<?php
+  include_once "config.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +24,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-light">
           <div class="container-fluid" style="background-color: black;">
             <a class="navbar-brand" href="home.php">
-              <img src="assets/images/Netflix.jfif" class="image-fluid" alt="">
+              <img src="assets/images/Netflix.jfif" class="image-fluid mb-4 me-4" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -49,16 +52,13 @@
                     <li><a class="dropdown-item" href="#" style="color: red;">KINH DỊ</a></li>
                   </ul>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="addfilm.php" style="color: red;">THÊM PHIM</a>
-                </li>
               </ul>
                 <form class="d-flex">
                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                   <button class="btn" type="submit" style="color: red; width: 40px; height: 40px;"><i class="bi bi-search"></i></button>
                 </form>
-                <button class="btn"  type="submit" style="color: red;width: 40px; height: 40px;margin: 5px;"><i class="bi bi-bell"></i></button>
-                <button class="btn"  type="submit" style="color: red;width: 40px; height: 40px;"><i class="bi bi-person-circle"></i></i></button>     
+                <button class="btn" type="submit" style="color: red;width: 40px; height: 40px;margin: 5px;"><i class="bi bi-bell"></i></button>
+                <button class="btn" type="submit" style="color: red;width: 40px; height: 40px;"><i class="bi bi-person-circle"></i></i></button>     
             </div>
           </div>
         </nav>
@@ -134,22 +134,25 @@
     <div id="carouselNOIBAT" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div class="row">
-            <div class="col-md">
-              <img src="assets/images/JonhWick.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/AntMan.jpg" width="500" height="250" class="d-block w-100 " alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
-          </div>
+          <ul class = "noi-bat">
+            <?php
+            // cho nay dang lam
+              if(!$conn){
+                die("kết nối thất bại. Vui lòng kiểm tra lại máy chủ");
+              }
+              $sql = "SELECT * FROM film where type_movie = 1 order by id DESC limit 12";
+              $result = mysqli_query($conn,$sql);
+              while($row=mysqli_fetch_assoc($result)){
+            ?>
+              <div class="row">
+                <div class="anh col-md-3"><img class="image-fluid" src="<?php echo $row['image']; ?>" alt=""></div>
+              </div>
+            <?php
+              }
+            ?>
+          </ul>
         </div>
-
+        
         <div class="carousel-item">
           <div class="row">
             <div class="col-md">
