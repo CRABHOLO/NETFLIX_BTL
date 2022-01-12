@@ -1,12 +1,4 @@
 <?php
-    // trước khi cho người dùng xâm nhập vào bên trong
-    // phải kiểm tra Thẻ làm việc
-    session_start();
-    if(!isset($_SESSION['isSigninOK'])){
-        header("location:login.php");
-    }
-?>
-<?php
 if($_POST['emaill'])//kiểm tra người dùng nhấp vào nút submit chưa và đã nhập email chưa
 {   
         $email = $_POST['emaill'];
