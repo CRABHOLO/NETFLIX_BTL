@@ -30,7 +30,7 @@
                             </div>
                             <div class="mb-3">
                               <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Mật khẩu">
-                              <div id="password" class="form-text">Mật khẩu của bạn phải chứa từ 4 đến 60 ký tự.</div>
+                              <div id="password" class="form-text">Mật khẩu của bạn phải chứa ít nhất 8 ký tự</div>
                             </div>
                             <button type="submit" class="btn " name="submit">Đăng nhập</button>
                             

@@ -9,10 +9,10 @@
     require "template/header.php";
 ?>
     <main>
-        <div class="container">
-            <h5 class="text-center text-primary mt-5">DANH SACH TAI KHOAN DA DANG KY</h5>
+        <div class="container_admin container">
+            <h5 class="text-center text-primary mt-5">DANH SÁCH TÀI KHOẢN ĐĂNG KÝ</h5>
             <div>
-                <a class="btn btn-primary" href="add_employee.php">Thêm</a>
+                <a class="btn btn-primary" href="add_employee.php">Thêm tài khoản</a>
             </div>
             <table class="table">
                 <thead>

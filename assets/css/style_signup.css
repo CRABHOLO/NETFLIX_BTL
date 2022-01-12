@@ -49,7 +49,6 @@ a{
     width: 100%;
     
 }
-
 .form_title{
     color: white;
     margin-bottom: 15px;
@@ -64,7 +63,7 @@ a{
     background-color: #333333 !important;
 }
 .form-control:focus{
-    color: white;
+    color: white ;
     border-bottom: 3px solid #e87033 !important;
     background-color:  #333333 !important;
     border-color: none !important;

@@ -4,7 +4,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup_Netflix</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
@@ -12,16 +14,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="assets/js/scrip-signup.js"></script>
     <link rel="stylesheet" href="assets/css/style_signup.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> -->
 </head>
- 
 <body class="bg__wrap">
     <nav class="main_nav">
         <a href="#" class="navbar-brand">
             <img src="assets/images/logo.jpg" alt="net/logo" class="img-fluid">
         </a>
         <button class="btn_login">
-        <a href="login.php" class="text_login" >Login</a>
+        <a href="login.php" class="text_login" >Đăng nhập</a>
         </button>
         
     </nav>
@@ -35,26 +35,26 @@
                     <form autocomplete action="process_signup.php" method="post" id="registraion_form">
                             <div class="mb-3">
                               <div class="form-text">Họ và Tên</div>
-                              <input type="text" class="form-control" id="fullname" name="txtfullname"  placeholder="Họ và tên" required>
+                              <input type="text" class="form-control" id="fullname" name="txtfullname" placeholder="Họ và tên" required>
                             </div>
                             <div class="mb-3">
-                              <div id="email" class="form-text">Email</div>
-                              <input type="email" class="form-control" name="txtemail"  id="email" aria-describedby="emailHelp" placeholder="Email hoặc số điện thoại" required autofocus>
+                            <label for="inputemail" class="form-text">Email </label>
+                            <input type="email" class="form-control" id="inputemail" name = "txtemail" placeholder="...@gmail.com" required autofocus aria-describedby="emailHelp">
+                            <small id="emailHelp"></small>
                             </div>
                             <div class="mb-3">
-                              <div id="password" class="form-text">Mật khẩu 
-                              <input type="password" name="txtpassword" class="form-control" id="password1" aria-describedby="password1Help" placeholder="Mật khẩu" required autofocus >
-                              <!-- <span class="show-btn"><i class="fas fa-eye"></i></span> -->
+                            <label for="inputpassword1" class="form-text">Mật khẩu</label> 
+                            <input type="password" class="form-control" id="inputpassword1" name = "txtPass1" placeholder="Nhập mật khẩu" required autofocus aria-describedby="pass1Help">
+                            <small id="pass1Help" ></small>
                             </div>
                             <div class="mb-3">
-                              <div id="password" class="form-text">Nhập lại mật khẩu
-                              <input type="password" name="repassword" class="form-control" id="password2" placeholder="Nhập lại mật khẩu" required>
-                              <!-- <span class="show-btn"><i class="fas fa-eye"></i></span> -->
-                              <span id='message'></span>
+                              <label class="form-text" for="inputpassword2">Nhập lại mật khẩu</label>
+                              <input type="password" class="form-control" id="inputpassword2" aria-describedby="pass2Help" placeholder="Nhập lại mật khẩu" required>
+                              <span id="message"></span>
                               <script>
-                                $('#password1, #password2').on('keyup', function () {
-                                  if ($('#password1').val() == $('#password2').val()) {
-                                      $('#message').text('Mật khẩu khớp').css('color', 'green');
+                                $('#inputpassword1, #inputpassword2').on('keyup', function () {
+                                  if ($('#inputpassword1').val() == $('#inputpassword2').val()) {
+                                      $('#message').text('Mật khẩu khớp').css('color', 'blue');
                                   } else 
                                       $('#message').text('Mật khẩu không khớp').css('color', 'red');
                                   });
@@ -71,11 +71,7 @@
                             <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
                                     <label class="form-check-label" for="inlineCheckbox1">Ghi nhớ tôi</label>
-                                    <?php
-                                      if(isset($_GET['error'])){
-                                          echo "<h5 style='color:red'> {$_GET['error']} </h5>";
-                                      }
-                                    ?>
+                                   
                             </div>
 
                             <button type="submit" class="btn" name="submit" id="btn_submit" >Đăng ký</button>
@@ -130,10 +126,7 @@
       </ul>
     </div>  
     
-    <script src="./js/showpassword.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
   
-
-

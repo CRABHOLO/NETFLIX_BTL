@@ -1,0 +1,16 @@
+
+
+.navbar{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    padding: 15px;
+    top: 0;
+    box-sizing: border-box;
+    background-color: white;
+    
+    
+}  
