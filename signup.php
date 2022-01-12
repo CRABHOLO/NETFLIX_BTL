@@ -36,23 +36,23 @@
                               <input type="text" class="form-control" id="fullname" name="txtfullname" placeholder="Họ và tên" required>
                             </div>
                             <div class="mb-3">
-                              <label class="form-text" for="inputemail">Email</label>
-                              <input type="email" class="form-control" name="txtemail"  id="inputemail" aria-describedby="emailHelp" placeholder="...@gmail.com" required>
-                              <small id="emailHelp"></small>
+                            <label for="inputemail" class="form-text">Email </label>
+                            <input type="email" class="form-control" id="inputemail" name = "txtemail" placeholder="...@gmail.com" required autofocus aria-describedby="emailHelp">
+                            <small id="emailHelp"></small>
                             </div>
                             <div class="mb-3">
-                              <label class="form-text" for="inputpassword1">Mật khẩu</label>
-                              <input type="password" name="txtpassword" class="form-control" id="password1" aria-describedby="pass1Help" placeholder="Mật khẩu" required>
-                              <small id="pass1Help" ></small>
+                            <label for="inputpassword1" class="form-text">Mật khẩu</label> 
+                            <input type="password" class="form-control" id="inputpassword1" name = "txtPass1" placeholder="Nhập mật khẩu" required autofocus aria-describedby="pass1Help">
+                            <small id="pass1Help" ></small>
                             </div>
                             <div class="mb-3">
                               <label class="form-text" for="inputpassword2">Nhập lại mật khẩu</label>
-                              <input type="password" name="repassword" class="form-control" id="password2" aria-describedby="pass2Help" placeholder="Nhập lại mật khẩu" required>
+                              <input type="password" class="form-control" id="inputpassword2" aria-describedby="pass2Help" placeholder="Nhập lại mật khẩu" required>
                               <span id="message"></span>
                               <script>
-                                $('#password1, #password2').on('keyup', function () {
-                                  if ($('#password1').val() == $('#password2').val()) {
-                                      $('#message').text('Mật khẩu khớp').css('color', 'green');
+                                $('#inputpassword1, #inputpassword2').on('keyup', function () {
+                                  if ($('#inputpassword1').val() == $('#inputpassword2').val()) {
+                                      $('#message').text('Mật khẩu khớp').css('color', 'blue');
                                   } else 
                                       $('#message').text('Mật khẩu không khớp').css('color', 'red');
                                   });
