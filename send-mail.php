@@ -1,6 +1,7 @@
 <?php
     $username = 'thuymia3008@gmail.com';
     $pass = 'trfairloasswrhjf';
+    $email 			= $_POST['txtemail'];
     //khai bao 
     
     //Import PHPMailer classes into the global namespace
@@ -20,7 +21,7 @@ require 'PHPMailer/SMTP.php';
     //Create an instance; passing true enables exceptions
     global $username;
     global $pass;
-$mail = new PHPMailer(true);
+ $mail = new PHPMailer(true);
 
 try {
     //Server settings

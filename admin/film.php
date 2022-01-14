@@ -1,11 +1,15 @@
 <?php
+ session_start();
+ if(!isset($_SESSION['isLoginOK'])){
+     header("location:login.php");
+ }
 require "template/header.php";
 ?>
     <main>
         <div class="container_admin container">
             <h5 class="text-center text-primary mt-5">THÔNG TIN CHI TIẾT PHIM</h5>
             <div>
-                <a class="btn btn-primary" href="add_employee.php">Thêm phim</a>
+                <a class="btn btn-primary" href="add-film.php">Thêm phim</a>
             </div>
             <table class="table">
                 <thead>
@@ -22,6 +26,7 @@ require "template/header.php";
                         <th scope="col">Nội dung</th>
                         <th scope="col">Thời lượng</th>
                         <th scope="col">Lượt xem</th>
+                        <th scope="col">Xóa phim</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,7 +38,11 @@ require "template/header.php";
                             die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
                         }
                         // Bước 02: Thực hiện truy vấn
-                        $sql = "SELECT fl.id, fl.name, fl.status, fl.director, fl.actor, fl.category_id, fl.type_movie, fl.year, fl.image, fl.description, fl.duration, fl.num_view  FROM film fl ";
+                        $sql = "SELECT fl.id, fl.name, fl.status, fl.director, fl.actor, ct.name, tm.nametm, fl.year, fl.image, fl.description, fl.duration, fl.num_view  
+                        from film fl ,category ct, typemovie tm where fl.category_id = ct.category_id and fl.type_movie = tm.type_movie ";
+
+                       
+
                         $result = mysqli_query($conn,$sql);
                         // Bước 03: Xử lý kết quả truy vấn
                         if(mysqli_num_rows($result) > 0){
@@ -45,8 +54,8 @@ require "template/header.php";
                                     <td><?php echo $row['status']; ?></td>
                                     <td><?php echo $row['director']; ?></td>
                                     <td><?php echo $row['actor']; ?></td>
-                                    <td><?php echo $row['category_id']; ?></td>
-                                    <td><?php echo $row['type_movie']; ?></td>
+                                    <td><?php echo $row['name']; ?></td>
+                                    <td><?php echo $row['nametm']; ?></td>
                                     <td><?php echo $row['year']; ?></td>
                                     <td><?php echo $row['image']; ?></td>
                                     <td><?php echo $row['description']; ?></td>
@@ -54,7 +63,6 @@ require "template/header.php";
                                     <td><?php echo $row['num_view']; ?></td>
                                   
                                 
-                                    <td><a href="update_employee.php?id=<?php echo $row['id']; ?>"><i class="bi bi-pencil-square"></i></a></td>
                                     <td><a href="delete_employee.php?id=<?php echo $row['id']; ?>"><i class="bi bi-trash"></i></a></td>
                                 </tr>
                     <?php
@@ -62,7 +70,7 @@ require "template/header.php";
                         }
                         // Bước 04: Đóng kết nối Database Server
                         mysqli_close($conn);
-                        <img src="" alt="">
+                       
                     ?>
                   
                     
