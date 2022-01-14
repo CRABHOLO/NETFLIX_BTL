@@ -3,10 +3,7 @@ if($_POST['emaill'])//kiểm tra người dùng nhấp vào nút submit chưa v�
 {   
         $email = $_POST['emaill'];
         // Bước 01: Kết nối Database Server
-        $conn = mysqli_connect('localhost','root','','netflix');
-        if(!$conn){
-            die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
-        }
+        require 'config.php';
         // Bước 02: Thực hiện truy vấn
         $sql01 = "SELECT * FROM users WHERE email = '$email'";
         // Ở đây còn có các vấn đề về tính hợp lệ dữ liệu nhập vào form

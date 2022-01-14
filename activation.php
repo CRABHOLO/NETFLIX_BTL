@@ -14,10 +14,7 @@
     if($_GET['key'] && $_GET['token']) //Kiểm tra có  giá trị trên url 
         {
         // Bước 01: Kết nối Database Server
-        $conn = mysqli_connect('localhost','root','','netflix');
-        if(!$conn){
-            die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
-        }
+        require 'config.php';
         //Bước 2 Thực hiện truy vấn
         $email = $_GET['key']; //Nó bắt giá trị tên URL
         $token = $_GET['token'];
