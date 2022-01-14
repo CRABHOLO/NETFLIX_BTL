@@ -6,10 +6,10 @@
 require "template/header.php";
 ?>
     <main>
-        <div class="container_admin container">
-            <h5 class="text-center text-primary mt-5">THÔNG TIN CHI TIẾT PHIM</h5>
+        <div class="container_admin bg-white container">
+            <h5 class="text-center text-danger mt-5">THÔNG TIN CHI TIẾT PHIM</h5>
             <div>
-                <a class="btn btn-primary" href="add-film.php">Thêm phim</a>
+                <a class="btn btn-danger" href="add-film.php">Thêm phim</a>
             </div>
             <table class="table">
                 <thead>
@@ -63,7 +63,7 @@ require "template/header.php";
                                     <td><?php echo $row['num_view']; ?></td>
                                   
                                 
-                                    <td><a href="delete_employee.php?id=<?php echo $row['id']; ?>"><i class="bi bi-trash"></i></a></td>
+                                    <td><a href="delete-film.php?id=<?php echo $row['id']; ?>"><i class="bi bi-trash text-danger"></i></a></td>
                                 </tr>
                     <?php
                             }

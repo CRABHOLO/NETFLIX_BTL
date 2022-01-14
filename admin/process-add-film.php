@@ -21,8 +21,10 @@
         die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
     }
     // Bước 02: Thực hiện truy vấn
-    $sql = "INSERT INTO film (name, status, director, actor, category_id, type_movie, year, image, description, duration) VALUES ('$TenPhim','$TrangThai','$TacGia','$DaoDien','$LoaiPhim', '$KieuPhim', $Nam, $Anh, $NoiDung, $ThoiLuong)";
+    
+    $sql = "INSERT INTO film (name, status, director, actor, category_id, type_movie, year, image, description, duration) VALUES ('$TenPhim','$TrangThai','$TacGia','$DaoDien','$LoaiPhim', '$KieuPhim', '$Nam', '$Anh', '$NoiDung', '$ThoiLuong')";
     // echo $sql;
+    echo $image; 
     $ketqua = mysqli_query($conn,$sql);
     
     if(!$ketqua){

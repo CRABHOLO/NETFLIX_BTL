@@ -57,7 +57,7 @@
                     <?php
                             }
                         }
-                        // Bước 03: Đóng kết nối
+                        // Bước 04: Đóng kết nối
                         mysqli_close($conn);
                     ?>
                
@@ -113,9 +113,10 @@
                 <label for="txtThoiLuong">Thời lượng</label>
                 <input type="text" class="form-control" id="txtThoiLuong" name="txtThoiLuong" placeholder="Thời lượng phim ">
             </div>
+            <button type="submit" class="btn btn-danger mt-3">Lưu lại</button>
             </div>
 
-            <button type="submit" class="btn btn-primary mt-3">Lưu lại</button>
+            
         </form>
     </div>    
     </main>
