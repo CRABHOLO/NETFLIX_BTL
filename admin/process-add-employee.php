@@ -19,7 +19,7 @@
     $ketqua = mysqli_query($conn,$sql);
     
     if(!$ketqua){
-        header("location: error.php"); //Chuyển hướng lỗi
+        echo "Lỗi"; //Chuyển hướng lỗi
     }else{
         header("location: admin.php"); //Chuyển hướng lại Trang Quản trị
     }

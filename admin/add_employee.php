@@ -15,7 +15,7 @@
             <div class="form-group">
                 <label for="txtHoTen">Họ và tên</label>
                 <input type="text" class="form-control" id="txtHoTen" name="txtHoTen" placeholder="Nhập họ tên">
-                <!-- <small id="txtHoTenHelp" class="form-text text-muted">Có thể dùng nó hiển thị thông báo lỗi hoặc gợi ý</small> -->
+                
             </div>
             
            
@@ -25,7 +25,7 @@
                
             </div>
             <div class="form-group">
-                <label for="txtHoTen">Mật khẩu</label>
+                <label for="txtpassword">Mật khẩu</label>
                 <input type="password" class="form-control" id="txtpassword" name="txtpassword" placeholder="Nhập mật khẩu">
                
             </div>

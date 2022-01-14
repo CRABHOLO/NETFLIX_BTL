@@ -15,7 +15,7 @@
                 <a class="btn btn-danger " href="add_employee.php">Thêm</a>
             </div>
             <table class="table bg-white" >
-                <thead>
+                <thead> 
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Họ và tên</th>
