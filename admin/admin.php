@@ -8,13 +8,13 @@
     
     require "template/header.php";
 ?>
-    <main>
-        <div class="container_admin container">
-            <h5 class="text-center text-primary mt-5">DANH SÁCH TÀI KHOẢN ĐĂNG KÝ</h5>
+    <main >
+        <div class="container_admin container ">
+            <h2 class=" text-center text-danger mt-5">DANH SÁCH TÀI KHOẢN ĐĂNG KÝ</h2>
             <div>
-                <a class="btn btn-primary" href="add_employee.php">Thêm</a>
+                <a class="btn btn-danger " href="add_employee.php">Thêm</a>
             </div>
-            <table class="table">
+            <table class="table bg-white" >
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
@@ -45,9 +45,8 @@
                                     <td><?php echo $row['fullname']; ?></td>
                                     <td><?php echo $row['email']; ?></td>
                                     <td><?php echo $row['password']; ?></td>
-                                
-                                    <td><a href="update_employee.php?id=<?php echo $row['id']; ?>"><i class="bi bi-pencil-square"></i></a></td>
-                                    <td><a href="delete_employee.php?id=<?php echo $row['id']; ?>"><i class="bi bi-trash"></i></a></td>
+                                    <td><a href="update_employee.php?id=<?php echo $row['id']; ?>"><i class="bi bi-pencil-square text-danger "></i></a></td>
+                                    <td><a href="delete_employee.php?id=<?php echo $row['id']; ?>"><i class="bi bi-trash text-danger"></i></a></td>
                                 </tr>
                     <?php
                             }

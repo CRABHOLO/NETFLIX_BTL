@@ -6,7 +6,7 @@ if(isset($_POST['submit'])  ){
  ////kiểm tra người dùng nhấp vào nút submit chưa và đã nhập email chưa
 	$fullname 		    = $_POST['txtfullname']; //coi dữ liệu là hợp lệ
 	$email 			= $_POST['txtemail'];
-	$pass1 		= $_POST['txtpassword'];
+	$pass1 		= $_POST['txtPass1'];
    
     // Bước 02: Thực hiện truy vấn
     $sql01 = "SELECT * FROM users WHERE email = '$email' ";
