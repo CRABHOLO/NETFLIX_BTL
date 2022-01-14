@@ -8,8 +8,7 @@
     padding: 15px;
     top: 0;
     box-sizing: border-box;
-    background-color: black !important;
-    
+    background-color: black !important;   
 }  
 .bg{
     background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3),rgba(0,0,0,0.3),rgba(0,0,0,0.3)) , url(../images/img_admin.jpg)center/cover no-repeat;
