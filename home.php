@@ -83,7 +83,7 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="assets/images/AntMan.jpg" width="1265" height="600" class="d-block w-100" alt="">
+                <img src="assets/images/p2.jpg" width="1265" height="600" class="d-block w-100" alt="">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>NGƯỜI KIẾN</h5>
                   <p>Câu truyện kể về Scott Lang - một tên trộm vừa được ra tù và trở thành Người Kiến với bộ đồ có khả
@@ -91,7 +91,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="assets/images/Avengers-EndGame.jpg" width="1265"  height="600"  class="d-block w-100" alt="">
+                <img src="assets/images/p3.jpg" width="1265"  height="600"  class="d-block w-100" alt="">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>BIỆT ĐỘI BÁO THÙ: HỒI KẾT</h5>
                   <p>Sau cú búng tay của gã khổng lồ điên Thanos, một nửa dân số toàn bộ vũ trụ đã bị bay màu.
@@ -100,7 +100,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="assets/images/JonhWick.jpg" width="1265"  height="600" class="d-block w-100" alt="">
+                <img src="assets/images/p1.jpg" width="1265"  height="600" class="d-block w-100" alt="">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>JONH WICK</h5>
                   <p>Jonh Wick - một sát thủ khét tiếng đã rửa tay gác kiếm - đang sống một cuộc sống yên ổn sau khi
@@ -129,68 +129,66 @@
   </main>
 
   <!--SLIDER NỔI BẬT-->
-  <section class="sub_post_slider_2 container-fluid">
+
+ 
+  
+  <section class="sub_post_slider_1 container-fluid">
     <h4 class="noibat mt-5" style="color: red;">NỔI BẬT</h4>
     <div id="carouselNOIBAT" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <ul class = "noi-bat">
-            <?php
-            // cho nay dang lam
-              if(!$conn){
-                die("kết nối thất bại. Vui lòng kiểm tra lại máy chủ");
-              }
-              $sql = "SELECT * FROM film where type_movie = 1 order by id DESC limit 12";
-              $result = mysqli_query($conn,$sql);
-              while($row=mysqli_fetch_assoc($result)){
-            ?>
-              <div class="row">
-                <div class="anh col-md-3"><img class="image-fluid" src="<?php echo $row['image']; ?>" alt=""></div>
+
+        <?php
+          $sql = "SELECT * FROM film WHERE id_category = '1' ORDER BY id DESC limit 1";
+          $result = mysqli_query($conn, $sql);
+          if(mysqli_num_rows($result)>0){
+            while($row = mysqli_fetch_assoc($result)){
+        ?>
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-md-3">
+                    <img class="img-fluid rounded" src="<?php echo $row['image']; ?>" alt="">
+                  </div>
+                  <div class="col-md-3">
+                    <img class="img-fluid rounded" src="<?php echo $row['image']; ?>" alt="">
+                  </div>
+                  <div class="col-md-3">
+                    <img class="img-fluid rounded" src="<?php echo $row['image']; ?>" alt="">
+                  </div>
+                  <div class="col-md-3">
+                    <img class="img-fluid rounded" src="<?php echo $row['image']; ?>" alt="">
+                  </div>
+                </div>
               </div>
-            <?php
-              }
-            ?>
-          </ul>
-        </div>
-        
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-md">
-              <img src="assets/images/JonhWick.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/AntMan.jpg" width="500" height="250" class="d-block w-100 " alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-md">
-              <img src="assets/images/JonhWick.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/AntMan.jpg" width="500" height="250" class="d-block w-100 " alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
-          </div>
-        </div>
+
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-3">
+                    <img class="img-fluid rounded" src="<?php echo $row['image']; ?>" alt="">
+                  </div>
+                  <div class="col-md-3">
+                    <img class="img-fluid rounded" src="<?php echo $row['image']; ?>" alt="">
+                  </div>
+                  <div class="col-md-3">
+                    <img class="img-fluid rounded" src="<?php echo $row['image']; ?>" alt="">
+                  </div>
+                  <div class="col-md-3">
+                    <img class="img-fluid rounded" src="<?php echo $row['image']; ?>" alt="">
+                  </div>
+                </div>
+              </div>
+        <?php
+            }
+          }
+        mysqli_close($conn);
+        ?>
+
       </div>
+
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselNOIBAT" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselNOIBAT " data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselNOIBAT" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
@@ -198,23 +196,17 @@
   </section>
 
 <!--SLIDER HÀNH ĐỘNG-->
-<section class="sub_post_slider_2 container-fluid">
-  <h4 class="noibat mt-5" style="color: red;">HÀNH ĐỘNG</h4>
+<section class="sub_post_slider_3 container-fluid">
+  <h4 class="hanhdong mt-5" style="color: red;">HÀNH ĐỘNG</h4>
   <div id="carouselHANHDONG" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <div class="row">
           <div class="col-md">
-            <img src="assets/images/JonhWick.jpg" width="500" height="250" class="d-block w-100" alt="">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2AUmvWm5ZDQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="col-md">
-            <img src="assets/images/AntMan.jpg" width="500" height="250" class="d-block w-100 " alt="">
-          </div>
-          <div class="col-md">
-            <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
-          </div>
-          <div class="col-md">
-            <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8ugaeA-nMTc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -222,32 +214,10 @@
       <div class="carousel-item">
         <div class="row">
           <div class="col-md">
-            <img src="assets/images/JonhWick.jpg" width="500" height="250" class="d-block w-100" alt="">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/EeCX8Y0a278" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="col-md">
-            <img src="assets/images/AntMan.jpg" width="500" height="250" class="d-block w-100 " alt="">
-          </div>
-          <div class="col-md">
-            <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
-          </div>
-          <div class="col-md">
-            <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-md">
-            <img src="assets/images/JonhWick.jpg" width="500" height="250" class="d-block w-100" alt="">
-          </div>
-          <div class="col-md">
-            <img src="assets/images/AntMan.jpg" width="500" height="250" class="d-block w-100 " alt="">
-          </div>
-          <div class="col-md">
-            <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
-          </div>
-          <div class="col-md">
-            <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/pzD9zGcUNrw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -264,23 +234,17 @@
 </section>
 
   <!-- SLIDER anime -->
-  <section class="sub_post_slider_2 container-fluid">
+  <section class="sub_post_slider_4 container-fluid">
     <h4 class="noibat mt-5" style="color: red;">ANIME</h4>
     <div id="carouselANIME" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="row">
             <div class="col-md">
-              <img src="assets/images/JonhWick.jpg" width="500" height="250" class="d-block w-100" alt="">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/2AUmvWm5ZDQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="col-md">
-              <img src="assets/images/AntMan.jpg" width="500" height="250" class="d-block w-100 " alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8ugaeA-nMTc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
         </div>
@@ -288,32 +252,10 @@
         <div class="carousel-item">
           <div class="row">
             <div class="col-md">
-              <img src="assets/images/JonhWick.jpg" width="500" height="250" class="d-block w-100" alt="">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/EeCX8Y0a278" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="col-md">
-              <img src="assets/images/AntMan.jpg" width="500" height="250" class="d-block w-100 " alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-md">
-              <img src="assets/images/JonhWick.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/AntMan.jpg" width="500" height="250" class="d-block w-100 " alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/pzD9zGcUNrw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
         </div>

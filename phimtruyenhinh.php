@@ -80,7 +80,7 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="assets/images/AntMan.jpg" width="1265" height="600" class="d-block w-100" alt="">
+                <img src="assets/images/p2.jpg" width="1265" height="600" class="d-block w-100" alt="">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>NGƯỜI KIẾN</h5>
                   <p>Câu truyện kể về Scott Lang - một tên trộm vừa được ra tù và trở thành Người Kiến với bộ đồ có khả
@@ -88,7 +88,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="assets/images/Avengers-EndGame.jpg" width="1265"  height="600"  class="d-block w-100" alt="">
+                <img src="assets/images/p3.jpg" width="1265"  height="600"  class="d-block w-100" alt="">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>BIỆT ĐỘI BÁO THÙ: HỒI KẾT</h5>
                   <p>Sau cú búng tay của gã khổng lồ điên Thanos, một nửa dân số toàn bộ vũ trụ đã bị bay màu.
@@ -97,7 +97,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="assets/images/JonhWick.jpg" width="1265"  height="600" class="d-block w-100" alt="">
+                <img src="assets/images/p1.jpg" width="1265"  height="600" class="d-block w-100" alt="">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>JONH WICK</h5>
                   <p>Jonh Wick - một sát thủ khét tiếng đã rửa tay gác kiếm - đang sống một cuộc sống yên ổn sau khi
