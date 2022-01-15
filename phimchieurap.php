@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trang Chủ</title>
+  <title>Phim Chiếu Rạp</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/styles_login.css">
   <link rel="stylesheet" href="assets/css/style_home.css">
 </head>
 
@@ -19,8 +20,8 @@
       <div class="col-md-12">
         <nav class="navbar navbar-expand-lg navbar-dark bg-light">
           <div class="container-fluid" style="background-color: black;">
-            <a class="navbar-brand" href="#">
-              <img src="assets/images/Netflix.jfif" class="image-fluid" alt="">
+            <a class="navbar-brand" href="home.php">
+              <img src="assets/images/Netflix.jfif" class="image-fluid mb-4 me-4" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -30,13 +31,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#" style="color: red;">TRANG CHỦ</a>
+                  <a class="nav-link" href="phimtruyenhinh.php" style="color: red;">PHIM TRUYỀN HÌNH</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" style="color: red;">PHIM TRUYỀN HÌNH</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#" style="color: red;">PHIM CHIẾU RẠP</a>
+                  <a class="nav-link" href="phimchieurap.php" style="color: red;">PHIM CHIẾU RẠP</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" style="color: red;" role="button"
@@ -52,12 +50,12 @@
                   </ul>
                 </li>
               </ul>
-              <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn" type="submit" style="color: red;"><i class="bi bi-search"></i></button>
-              </form>
-              <button class="btn" type="submit" style="color: red;"><i class="bi bi-bell"></i></button>
-              <button class="btn" type="submit" style="color: red;"><i class="bi bi-person-circle"></i></i></button>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn" type="submit" style="color: red; width: 40px; height: 40px;"><i class="bi bi-search"></i></button>
+                </form>
+                <button class="btn"  type="submit" style="color: red;width: 40px; height: 40px;margin: 5px;"><i class="bi bi-bell"></i></button>
+                <button class="btn"  type="submit" style="color: red;width: 40px; height: 40px;"><i class="bi bi-person-circle"></i></i></button>     
             </div>
           </div>
         </nav>
@@ -128,9 +126,9 @@
   </main>
 
   <!--SLIDER NỔI BẬT-->
-  <section class="sub_post_slider container-fluid mt-5">
-    <h4 class="noibat mt-3" style="color: red;">NỔI BẬT</h4>
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <section class="sub_post_slider_2 container-fluid">
+    <h4 class="noibat mt-5" style="color: red;">NỔI BẬT</h4>
+    <div id="carouselNOIBAT" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="row">
@@ -165,7 +163,6 @@
             </div>
           </div>
         </div>
-
         <div class="carousel-item">
           <div class="row">
             <div class="col-md">
@@ -183,11 +180,11 @@
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselNOIBAT" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselNOIBAT " data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
@@ -195,76 +192,75 @@
   </section>
 
 <!--SLIDER HÀNH ĐỘNG-->
-  <section class="sub_post_slider_1 container-fluid">
-    <h4 class="noibat mt-5" style="color: red;">HÀNG ĐỘNG</h4>
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="row">
-            <div class="col-md">
-              <img src="assets/images/JonhWick.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/AntMan.jpg" width="500" height="250" class="d-block w-100 " alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
+<section class="sub_post_slider_2 container-fluid">
+  <h4 class="noibat mt-5" style="color: red;">HÀNH ĐỘNG</h4>
+  <div id="carouselHANHDONG" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md">
+            <img src="assets/images/JonhWick.jpg" width="500" height="250" class="d-block w-100" alt="">
           </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-md">
-              <img src="assets/images/JonhWick.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/AntMan.jpg" width="500" height="250" class="d-block w-100 " alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
+          <div class="col-md">
+            <img src="assets/images/AntMan.jpg" width="500" height="250" class="d-block w-100 " alt="">
           </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-md">
-              <img src="assets/images/JonhWick.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/AntMan.jpg" width="500" height="250" class="d-block w-100 " alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
-            <div class="col-md">
-              <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
-            </div>
+          <div class="col-md">
+            <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
+          </div>
+          <div class="col-md">
+            <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md">
+            <img src="assets/images/JonhWick.jpg" width="500" height="250" class="d-block w-100" alt="">
+          </div>
+          <div class="col-md">
+            <img src="assets/images/AntMan.jpg" width="500" height="250" class="d-block w-100 " alt="">
+          </div>
+          <div class="col-md">
+            <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
+          </div>
+          <div class="col-md">
+            <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md">
+            <img src="assets/images/JonhWick.jpg" width="500" height="250" class="d-block w-100" alt="">
+          </div>
+          <div class="col-md">
+            <img src="assets/images/AntMan.jpg" width="500" height="250" class="d-block w-100 " alt="">
+          </div>
+          <div class="col-md">
+            <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
+          </div>
+          <div class="col-md">
+            <img src="assets/images/Jojo'sBizarreAdventure.jpg" width="500" height="250" class="d-block w-100" alt="">
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselHANHDONG" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselHANHDONG" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
 
   <!-- SLIDER anime -->
   <section class="sub_post_slider_2 container-fluid">
     <h4 class="noibat mt-5" style="color: red;">ANIME</h4>
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselANIME" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="row">
@@ -316,16 +312,60 @@
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselANIME" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselANIME" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
   </section>
+
+  <div class="footer">
+    <div class="footer-head">
+      <a href="#" class="footer-head-text">Bạn có câu hỏi? Liên hệ với chúng tôi.</a>
+    </div>
+    <ul class="footer-links structural">
+      <li class="footer-link-item" placeholder="footer_responsive_link_faq_item">
+        <a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/support/412" placeholder="footer_responsive_link_faq">
+          <span id="" data-uia="data-uia-footer-label">Câu hỏi thường gặp</span>
+        </a>
+      </li>
+          
+      <li class="footer-link-item" placeholder="footer_responsive_link_help_item">
+        <a class="footer-link" data-uia="footer-link" href="https://help.netflix.com" placeholder="footer_responsive_link_help">    
+          <span id="" data-uia="data-uia-footer-label">Trung tâm trợ giúp</span>
+        </a>
+      </li>
+    
+      <li class="footer-link-item" placeholder="footer_responsive_link_terms_item">
+        <a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/legal/termsofuse" placeholder="footer_responsive_link_terms">   
+          <span id="" data-uia="data-uia-footer-label">Điều khoản sử dụng</span>  
+        </a>  
+      </li>
+    </ul>
+    <ul class="footer-links structural">
+      <li class="footer-link-item" placeholder="footer_responsive_link_privacy_separate_link_item">
+        <a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/legal/privacy" placeholder="footer_responsive_link_privacy_separate_link">
+          <span id="" data-uia="data-uia-footer-label">Quyền riêng tư</span>
+        </a>
+      </li>
+    
+      <li class="footer-link-item" placeholder="footer_responsive_link_cookies_separate_link_item">
+        <a class="footer-link" data-uia="footer-link" href="#" placeholder="footer_responsive_link_cookies_separate_link">
+          <span id="" data-uia="data-uia-footer-label">Tùy chọn cookie</span>
+        </a>
+      </li>
+    
+      <li class="footer-link-item" placeholder="footer_responsive_link_corporate_information_item">
+        <a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/legal/corpinfo" placeholder="footer_responsive_link_corporate_information">
+          <span id="" data-uia="data-uia-footer-label">Thông tin doanh nghiệp</span>
+        </a>
+      </li>
+    </ul>
+  </div>  
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

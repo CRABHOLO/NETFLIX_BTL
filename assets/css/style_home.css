@@ -16,4 +16,13 @@
     max-width: 90%;
 }
 
-/*CSS for main*/
+.anh .col-md-3{
+    display: flex;
+}
+.btn-logout{
+    background-color: red;
+    padding: 7px;
+    border-radius: 5px;
+    margin-left: 4px;
+    border: 0;
+}

@@ -26,7 +26,7 @@ if(isset($_POST['submit'])  ){
         //Sau khi lưu xong chúng ta cần gửi tới email đăng kí đường link tới website của chúng ta 
         //yêu cầu người dùng kích hoạt ;biến link sẽ được gửi vào email
 
-        $link = "<a href='localhost:85/BTL/activation.php?key=".$email."&token=".$token."'>Nhấp vào đây để kích hoạt</a>";
+        $link = "<a href='localhost/BTL/activation.php?key=".$email."&token=".$token."'>Nhấp vào đây để kích hoạt</a>";
         include "send-mail.php";
         if(sendEmailForAccountActive($email,$link)){
             echo "vui lòng kiểm tra hộp thư của bạn để kích hoạt tài khoản";

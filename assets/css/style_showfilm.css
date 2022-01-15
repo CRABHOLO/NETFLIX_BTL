@@ -1,0 +1,39 @@
+.col-md-12{
+    padding: 0; 
+}
+
+.navbar{
+    padding: 0;
+}
+
+.navbar-brand{
+    width: 200px;
+    margin: 0;
+}
+
+.image-fluid{
+    max-width: 90%;
+}
+.bg{
+    background: url(../images/Insidiuos.jpg)center/cover no-repeat;
+    /* min-width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative; */
+}
+.container{
+    margin-top: 10vh;
+}
+.form-control{
+    width: 100%;
+}
+.btn-play{
+    background-color: #fff ;
+    border-radius: 5px;
+}
+.btn-list{
+    background-color: white;
+    border-radius: 5px;
+}
